@@ -173,8 +173,8 @@ export interface Match {
   authoritative: boolean;
   label?: string;
   size: number;
-  presences: Match[];
-  self: Match;
+  presences: Presence[];
+  self: Presence;
 }
 
 /** Create a multiplayer match. */
@@ -202,7 +202,7 @@ export interface MatchData {
   match_id: string;
   op_code: number;
   data: object;
-  presence: Presence;
+  presence?: Presence;
 }
 
 /** Send a message contains match data. */
